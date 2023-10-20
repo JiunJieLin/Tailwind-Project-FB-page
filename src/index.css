@@ -5,4 +5,7 @@
   .popover-btn {
     @apply ml-2 flex h-[39px] w-[39px] cursor-pointer items-center justify-center rounded-full bg-fb-popover p-2.5 active:bg-fb-active;
   }
+  .popover-panel {
+    @apply absolute right-0 top-12 w-[300px] rounded-lg border-fb-input bg-fb-header p-4 shadow-lg lg:w-[360px];
+  }
 }

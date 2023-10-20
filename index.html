@@ -8,7 +8,7 @@
   </head>
   <body class="bg-fb-bg">
     <header
-      class="fixed flex h-[56px] w-full justify-between bg-fb-header px-4"
+      class="fixed flex h-[56px] w-full items-center justify-between bg-fb-header px-4"
     >
       <!-- header left -->
       <div class="flex items-center">
@@ -49,19 +49,146 @@
         </div>
       </div>
       <!-- header right -->
-      <div class="flex items-center">
-        <button class="popover-btn">
+      <div class="relative flex items-center">
+        <button class="popover-btn" id="plus-btn">
           <img src="https://bruce-fe-fb.web.app/image/plus.svg" />
         </button>
-        <button class="popover-btn">
+        <button class="popover-btn" id="mensenger-btn">
           <img src="https://bruce-fe-fb.web.app/image/messenger.svg" />
         </button>
-        <button class="popover-btn">
+        <button class="popover-btn" id="bell-btn">
           <img src="https://bruce-fe-fb.web.app/image/bell.svg" />
         </button>
-        <button class="popover-btn">
+        <button class="popover-btn" id="down-btn">
           <img src="https://bruce-fe-fb.web.app/image/down.svg" />
         </button>
+        <!-- 下拉式選單 -->
+        <!-- 下拉 1 -->
+        <div class="popover-panel hidden" id="plus-panel">
+          <p class="mb-3 text-2xl text-white">建立</p>
+          <div
+            class="mb-2 flex cursor-pointer items-center rounded-lg bg-fb-header p-1"
+          >
+            <div
+              class="mr-2 flex items-center justify-center rounded-full bg-fb-input p-2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 512 512"
+                class="fill-white"
+              >
+                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                  d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"
+                />
+              </svg>
+            </div>
+
+            <div>
+              <p class="mb-[2px] text-sm text-white">貼文</p>
+              <p class="text-xs text-gray-400">在動態消息分享貼文。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 下拉 2 -->
+      <div class="popover-panel hidden" id="messenger-panel">
+        <p class="mb-3 text-2xl text-white">Messenger</p>
+        <div class="mb-4 flex items-center rounded-full bg-fb-input px-3 py-1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="1em"
+            viewBox="0 0 512 512"
+            class="mr-2 fill-white"
+          >
+            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path
+              d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+            />
+          </svg>
+          <input
+            type="text"
+            placeholder="搜尋 Messenger"
+            class="w-full bg-transparent text-white focus:outline-none"
+          />
+        </div>
+        <div>
+          <div
+            class="mb-2 flex cursor-pointer items-center rounded-lg bg-fb-header p-1"
+          >
+            <div class="mr-3 h-[50px] w-[50px] overflow-hidden rounded-full">
+              <img
+                class="w-full object-cover"
+                src="https://bruce-fe-fb.web.app/image/avator.png"
+              />
+            </div>
+
+            <div>
+              <p class="mb-[2px] text-base text-white">Kim</p>
+              <p class="text-sm text-gray-400">早安！ 1 分鐘前</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 下拉 3 -->
+      <div class="popover-panel hidden" id="bell-panel">
+        <p class="mb-3 text-2xl text-white">通知</p>
+
+        <div>
+          <div
+            class="mb-2 flex cursor-pointer items-center rounded-lg bg-fb-header p-1"
+          >
+            <div class="mr-3 h-[50px] w-[50px] overflow-hidden rounded-full">
+              <img
+                class="w-full object-cover"
+                src="https://bruce-fe-fb.web.app/image/avator.png"
+              />
+            </div>
+
+            <div>
+              <p class="mb-[2px] text-sm text-white">Herry 發佈了一則新訊息</p>
+              <p class="text-xs text-fb">1 分鐘前</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 下拉 4-->
+      <div class="popover-panel hidden" id="down-panel">
+        <div>
+          <div
+            class="mb-3 flex cursor-pointer items-center rounded-lg bg-fb-header p-1"
+          >
+            <div class="mr-3 h-[50px] w-[50px] overflow-hidden rounded-full">
+              <img
+                class="w-full object-cover"
+                src="https://bruce-fe-fb.web.app/image/avator.png"
+              />
+            </div>
+            <div>
+              <p class="mb-[2px] text-sm text-white">Kim</p>
+              <p class="text-xs text-white">查看你的個人檔案</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mb-2 flex cursor-pointer items-center rounded-lg hover:bg-fb-input"
+        >
+          <div class="mr-2 flex items-center rounded-full bg-fb-input p-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="1em"
+              viewBox="0 0 512 512"
+              class="fill-white"
+            >
+              <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path
+                d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"
+              />
+            </svg>
+          </div>
+          <p class="text-sm text-white">登出</p>
+        </div>
       </div>
     </header>
 
