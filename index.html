@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FB page</title>
+  </head>
+  <body class="bg-fb-bg">
+    <header class="fixed h-[56px] w-full bg-fb-header"></header>
+    <main class="flex min-h-[100vh] pt-main-span">
+      <!-- 左側資訊欄 -->
+      <div
+        class="sticky top-main-span hidden h-full w-full max-w-[360px] lg:block"
+      >
+        <p class="w-full bg-blue-300">左側資訊欄</p>
+      </div>
+      <!-- 動態牆 -->
+      <div class="mx-auto w-full max-w-[744px]">
+        <p class="w-full bg-white">動態牆</p>
+      </div>
+      <!-- 右側資訊欄 -->
+      <div
+        class="sticky top-main-span hidden h-full w-full max-w-[360px] lg:block"
+      >
+        <p class="w-full bg-green-300">右側資訊欄</p>
+      </div>
+    </main>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
