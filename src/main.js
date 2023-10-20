@@ -1,4 +1,5 @@
 import "./index.css";
+//Panel 相關
 const plus = document.getElementById("plus-btn");
 const messenger = document.getElementById("messenger-btn");
 const bell = document.getElementById("bell-btn");
@@ -57,3 +58,5 @@ bellPanel.addEventListener("click", function (event) {
 downPanel.addEventListener("click", function (event) {
   event.stopPropagation();
 });
+
+//左側 bar
