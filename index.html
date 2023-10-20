@@ -7,7 +7,64 @@
     <title>FB page</title>
   </head>
   <body class="bg-fb-bg">
-    <header class="fixed h-[56px] w-full bg-fb-header"></header>
+    <header
+      class="fixed flex h-[56px] w-full justify-between bg-fb-header px-4"
+    >
+      <!-- header left -->
+      <div class="flex items-center">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="39px"
+          viewBox="0 0 512 512"
+          class="fill-current text-fb"
+        >
+          <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+          <path
+            d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
+          />
+        </svg>
+        <!-- searchbar 只在電腦顯示 手機版只會出現一個 logo -->
+        <button class="popover-btn lg:hidden">
+          <img src="https://bruce-fe-fb.web.app/image/search.svg" />
+        </button>
+        <div
+          class="ml-2 hidden w-[240px] flex-shrink items-center rounded-full bg-fb-input px-3 py-2 lg:flex"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="1em"
+            viewBox="0 0 512 512"
+            class="mr-2"
+          >
+            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path
+              d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+            />
+          </svg>
+          <input
+            type="text"
+            placeholder="搜尋 Facebook"
+            class="w-full bg-transparent text-white focus:outline-none"
+          />
+        </div>
+      </div>
+      <!-- header right -->
+      <div class="flex items-center">
+        <button class="popover-btn">
+          <img src="https://bruce-fe-fb.web.app/image/plus.svg" />
+        </button>
+        <button class="popover-btn">
+          <img src="https://bruce-fe-fb.web.app/image/messenger.svg" />
+        </button>
+        <button class="popover-btn">
+          <img src="https://bruce-fe-fb.web.app/image/bell.svg" />
+        </button>
+        <button class="popover-btn">
+          <img src="https://bruce-fe-fb.web.app/image/down.svg" />
+        </button>
+      </div>
+    </header>
+
     <main class="flex min-h-[100vh] pt-main-span">
       <!-- 左側資訊欄 -->
       <div

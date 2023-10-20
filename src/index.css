@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer components {
+  .popover-btn {
+    @apply ml-2 flex h-[39px] w-[39px] cursor-pointer items-center justify-center rounded-full bg-fb-popover p-2.5 active:bg-fb-active;
+  }
+}
