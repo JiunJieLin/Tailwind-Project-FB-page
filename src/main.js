@@ -129,3 +129,31 @@ const lists = function () {
 };
 
 lists();
+
+//右側 bar
+const rightList = document.getElementById("right-list");
+const renderRightList = function (name, img) {
+  const items = `<div
+          class="flex w-full cursor-pointer items-center justify-items-center rounded py-2 px-1 hover:bg-fb-input"
+        >
+          <div class="w-[45px]">
+            <div class="relative w-[32px]">
+              <div class="overflow-hidden rounded-full">
+                <img src="${img}" />
+              </div>
+              <div
+                class="absolute bottom-0 right-0 h-[8px] w-[8px] rounded-full bg-green-500 ring-2 ring-black"
+              ></div>
+            </div>
+          </div>
+          <div><p class="text-[.9rem] text-white">${name}</p></div>
+        </div>`;
+  return items;
+};
+let str = `"<p class="mb-2 w-full text-gray-400 text-lg">聯絡人</p>"`;
+for (let i = 0; i < 10; i++) {
+  str =
+    str +
+    renderRightList("Kim", "https://bruce-fe-fb.web.app/image/avator.png");
+}
+rightList.innerHTML = str;

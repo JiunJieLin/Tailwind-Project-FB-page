@@ -195,28 +195,18 @@
     <main class="flex min-h-[100vh] pt-main-span">
       <!-- 左側資訊欄 -->
       <div
-        class="sticky top-main-span hidden h-full w-full max-w-[360px] p-4 lg:block"
+        class="sticky top-main-span hidden h-full w-full max-w-[360px] border-2 p-4 lg:block"
         id="left-list"
-      >
-        <div
-          class="mb-1 flex w-full cursor-pointer items-center justify-items-center rounded p-2 hover:bg-fb-input"
-        >
-          <div class="mr-4 w-[32px] overflow-hidden rounded-full">
-            <img src="https://bruce-fe-fb.web.app/image/avator.png" />
-          </div>
-          <div><p class="text-[.9rem] text-white">Kim</p></div>
-        </div>
-      </div>
+      ></div>
       <!-- 動態牆 -->
       <div class="mx-auto w-full max-w-[744px]">
         <p class="w-full bg-white">動態牆</p>
       </div>
       <!-- 右側資訊欄 -->
       <div
-        class="sticky top-main-span hidden h-full w-full max-w-[360px] lg:block"
-      >
-        <p class="w-full bg-green-300">右側資訊欄</p>
-      </div>
+        class="sticky top-main-span hidden h-full w-full max-w-[360px] border-2 lg:block"
+        id="right-list"
+      ></div>
     </main>
     <script type="module" src="./src/main.js"></script>
   </body>
