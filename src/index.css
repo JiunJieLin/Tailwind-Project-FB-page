@@ -8,6 +8,9 @@
   .popover-panel {
     @apply absolute right-0 top-12 w-[300px] rounded-lg border-fb-input bg-fb-header p-4 shadow-lg lg:w-[360px];
   }
+  .card {
+    @apply mt-4 rounded-lg bg-fb-card px-3 py-3;
+  }
 }
 
 /* Chrome, Safari and Opera */

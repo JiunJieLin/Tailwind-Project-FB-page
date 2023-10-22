@@ -159,9 +159,20 @@ for (let i = 0; i < 10; i++) {
 rightList.innerHTML = str;
 
 //動態牆的複製
-const folatingItem = `<div class="min-w-[120px] flex-1 cursor-pointer px-[4px]">
-              <!-- 布的按鈕 -->
-              <div class="relative">
+const storyList = document.getElementById("story-list");
+const randomStoryItem = function () {
+  for (let i = 0; i < 5; i++) {
+    const divBox = document.createElement("div");
+    divBox.classList.add(
+      "min-w-[120px]",
+      "flex-1",
+      "cursor-pointer",
+      "px-[4px]"
+    );
+    divBox.innerHTML = `<!-- 布的按鈕 -->
+              <div class="relative overflow-hidden">
+              <div id="story-mask-${i}" class="absolute left-0 top-0 h-full w-full bg-black/20 hidden"
+                ></div>
                 <div
                   class="absolute left-4 top-4 z-10 flex h-[32px] w-[32px] items-center justify-center rounded-full bg-fb-card ring ring-fb"
                 >
@@ -170,12 +181,32 @@ const folatingItem = `<div class="min-w-[120px] flex-1 cursor-pointer px-[4px]">
 
                 <!-- 覆蓋一層背景漸層的效果 -->
                 <div
-                  class="absolute left-0 top-0 h-full w-full bg-gradient-to-b from-black/30 to-transparent"
+                  class="absolute left-0 top-0 h-full w-full bg-gradient-to-b from-black/30 to-transparent z-20"
                 ></div>
-                <img
-                  class="h-full w-full duration-300 hover:scale-105"
+                <img id="story-img-${i}"
+                  class="h-full w-full duration-300"
                   src="https://bruce-fe-fb.web.app/image/story.png"
                 />
-                <p class="absolute bottom-2 left-2 text-white">Kim</p>
-              </div>
-            </div>`;
+                <p class="absolute bottom-2 left-2 text-white">Kim</p></div>`;
+    divBox.addEventListener("mouseover", function () {
+      //to delete
+      const mask = document.getElementById(`story-mask-${i}`);
+      const img = document.getElementById(`story-img-${i}`);
+      mask.classList.remove("hidden");
+      img.classList.add("scale-105");
+    });
+
+    divBox.addEventListener("mouseout", function () {
+      //to add
+      const mask = document.getElementById(`story-mask-${i}`);
+      const img = document.getElementById(`story-img-${i}`);
+      mask.classList.add("hidden");
+      img.classList.remove("scale-105");
+    });
+
+    storyList.appendChild(divBox);
+  }
+};
+randomStoryItem();
+
+//包廂頭像的複製

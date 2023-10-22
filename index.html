@@ -203,7 +203,7 @@
       <div class="mx-auto w-full max-w-[744px] px-4">
         <!-- 限時動態 -->
         <div class="relative">
-          <div class="no-scrollbar flex overflow-x-auto">
+          <div class="no-scrollbar flex overflow-x-auto" id="story-list">
             <div class="min-w-[120px] flex-1 px-[4px]">
               <div class="flex h-full flex-col">
                 <div class="h-full overflow-hidden">
@@ -222,111 +222,7 @@
                 </div>
               </div>
             </div>
-            <!-- 第二個限時 -->
-            <div class="min-w-[120px] flex-1 cursor-pointer px-[4px]">
-              <!-- 布的按鈕 -->
-              <div class="relative">
-                <div
-                  class="absolute left-4 top-4 z-10 flex h-[32px] w-[32px] items-center justify-center rounded-full bg-fb-card ring ring-fb"
-                >
-                  <p class="text-sm text-white">布</p>
-                </div>
-
-                <!-- 覆蓋一層背景漸層的效果 -->
-                <div
-                  class="absolute left-0 top-0 h-full w-full bg-gradient-to-b from-black/30 to-transparent"
-                ></div>
-                <img
-                  class="h-full w-full duration-300 hover:scale-105"
-                  src="https://bruce-fe-fb.web.app/image/story.png"
-                />
-                <p class="absolute bottom-2 left-2 text-white">Kim</p>
-              </div>
-            </div>
-            <!-- 第二個限時 -->
-            <div class="min-w-[120px] flex-1 cursor-pointer px-[4px]">
-              <!-- 布的按鈕 -->
-              <div class="relative">
-                <div
-                  class="absolute left-4 top-4 z-10 flex h-[32px] w-[32px] items-center justify-center rounded-full bg-fb-card ring ring-fb"
-                >
-                  <p class="text-sm text-white">布</p>
-                </div>
-
-                <!-- 覆蓋一層背景漸層的效果 -->
-                <div
-                  class="absolute left-0 top-0 h-full w-full bg-gradient-to-b from-black/30 to-transparent"
-                ></div>
-                <img
-                  class="h-full w-full duration-300 hover:scale-105"
-                  src="https://bruce-fe-fb.web.app/image/story.png"
-                />
-                <p class="absolute bottom-2 left-2 text-white">Kim</p>
-              </div>
-            </div>
-            <!-- 第二個限時 -->
-            <div class="min-w-[120px] flex-1 cursor-pointer px-[4px]">
-              <!-- 布的按鈕 -->
-              <div class="relative">
-                <div
-                  class="absolute left-4 top-4 z-10 flex h-[32px] w-[32px] items-center justify-center rounded-full bg-fb-card ring ring-fb"
-                >
-                  <p class="text-sm text-white">布</p>
-                </div>
-
-                <!-- 覆蓋一層背景漸層的效果 -->
-                <div
-                  class="absolute left-0 top-0 h-full w-full bg-gradient-to-b from-black/30 to-transparent"
-                ></div>
-                <img
-                  class="h-full w-full duration-300 hover:scale-105"
-                  src="https://bruce-fe-fb.web.app/image/story.png"
-                />
-                <p class="absolute bottom-2 left-2 text-white">Kim</p>
-              </div>
-            </div>
-            <!-- 第二個限時 -->
-            <div class="min-w-[120px] flex-1 cursor-pointer px-[4px]">
-              <!-- 布的按鈕 -->
-              <div class="relative">
-                <div
-                  class="absolute left-4 top-4 z-10 flex h-[32px] w-[32px] items-center justify-center rounded-full bg-fb-card ring ring-fb"
-                >
-                  <p class="text-sm text-white">布</p>
-                </div>
-
-                <!-- 覆蓋一層背景漸層的效果 -->
-                <div
-                  class="absolute left-0 top-0 h-full w-full bg-gradient-to-b from-black/30 to-transparent"
-                ></div>
-                <img
-                  class="h-full w-full duration-300 hover:scale-105"
-                  src="https://bruce-fe-fb.web.app/image/story.png"
-                />
-                <p class="absolute bottom-2 left-2 text-white">Kim</p>
-              </div>
-            </div>
-            <!-- 第二個限時 -->
-            <div class="min-w-[120px] flex-1 cursor-pointer px-[4px]">
-              <!-- 布的按鈕 -->
-              <div class="relative">
-                <div
-                  class="absolute left-4 top-4 z-10 flex h-[32px] w-[32px] items-center justify-center rounded-full bg-fb-card ring ring-fb"
-                >
-                  <p class="text-sm text-white">布</p>
-                </div>
-
-                <!-- 覆蓋一層背景漸層的效果 -->
-                <div
-                  class="absolute left-0 top-0 h-full w-full bg-gradient-to-b from-black/30 to-transparent"
-                ></div>
-                <img
-                  class="h-full w-full duration-300 hover:scale-105"
-                  src="https://bruce-fe-fb.web.app/image/story.png"
-                />
-                <p class="absolute bottom-2 left-2 text-white">Kim</p>
-              </div>
-            </div>
+            <!-- 第二個限時在 js -->
           </div>
           <!-- 箭頭 -->
           <div>
@@ -338,7 +234,7 @@
           </div>
         </div>
         <!-- 發布貼文區 -->
-        <div class="mt-4 bg-fb-card px-3 py-3">
+        <div class="mt-4 rounded-lg bg-fb-card px-3 py-3">
           <div class="flex">
             <div class="mr-3 w-[40px] overflow-hidden rounded-full">
               <img src="https://bruce-fe-fb.web.app/image/avator.png" />
@@ -384,6 +280,29 @@
                 </div>
                 <p class="pl-1.5 text-sm text-gray-400">感受/活動</p>
               </button>
+            </div>
+          </div>
+        </div>
+        <!-- 包廂輪播 -->
+        <div class="card flex">
+          <!-- 包廂 -->
+          <button
+            class="mr-4 flex h-[40px] items-center rounded-full px-4 ring-2 ring-gray-600"
+          >
+            <div class="w-[24px]">
+              <img src="https://bruce-fe-fb.web.app/image/video.svg" />
+            </div>
+            <p class="ml-2 text-sm font-bold text-fb">建立包廂</p>
+          </button>
+          <!-- 大頭 -->
+          <div class="w-[55px]">
+            <div class="relative w-[40px] cursor-pointer">
+              <div class="overflow-hidden rounded-full">
+                <img src="https://bruce-fe-fb.web.app/image/avator.png" />
+                <div
+                  class="absolute bottom-0 right-0 h-[10px] w-[10px] rounded-full bg-green-500 ring ring-gray-900"
+                ></div>
+              </div>
             </div>
           </div>
         </div>
