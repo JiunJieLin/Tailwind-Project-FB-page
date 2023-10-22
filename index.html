@@ -199,6 +199,7 @@
         id="left-list"
       ></div>
       <!-- 動態牆 -->
+      <!-- Top 限時動態 -->
       <div class="mx-auto w-full max-w-[744px] px-4">
         <!-- 限時動態 -->
         <div class="relative">
@@ -336,7 +337,58 @@
             </button>
           </div>
         </div>
+        <!-- 發布貼文區 -->
+        <div class="mt-4 bg-fb-card px-3 py-3">
+          <div class="flex">
+            <div class="mr-3 w-[40px] overflow-hidden rounded-full">
+              <img src="https://bruce-fe-fb.web.app/image/avator.png" />
+            </div>
+            <div class="flex flex-1 items-center rounded-3xl bg-fb-input">
+              <input
+                class="bg-transparent pl-3 text-gray-400 focus:outline-none"
+                type="text"
+                placeholder="Kim，在想些什麼？"
+              />
+            </div>
+          </div>
+          <!-- 直線 -->
+          <div class="flex border-b border-gray-700 pt-3"></div>
+          <!-- buttons -->
+          <div class="flex flex-1 items-center justify-around pt-3">
+            <div>
+              <button
+                class="flex h-[40px] items-center rounded-lg hover:bg-fb-input"
+              >
+                <div class="w-[16px]">
+                  <img src="https://bruce-fe-fb.web.app/image/camera.svg" />
+                </div>
+                <p class="pl-1.5 text-sm text-gray-400">直撥視訊</p>
+              </button>
+            </div>
+            <div>
+              <button
+                class="flex h-[40px] items-center rounded-lg hover:bg-fb-input"
+              >
+                <div class="w-[16px]">
+                  <img src="https://bruce-fe-fb.web.app/image/photo.svg" />
+                </div>
+                <p class="pl-1.5 text-sm text-gray-400">相片/影片</p>
+              </button>
+            </div>
+            <div>
+              <button
+                class="flex h-[40px] items-center rounded-lg hover:bg-fb-input"
+              >
+                <div class="w-[16px]">
+                  <img src="https://bruce-fe-fb.web.app/image/feel.svg" />
+                </div>
+                <p class="pl-1.5 text-sm text-gray-400">感受/活動</p>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
+
       <!-- 右側資訊欄 -->
       <div
         class="sticky top-main-span hidden h-full w-full max-w-[360px] border-2 lg:block"
