@@ -12,7 +12,8 @@
     "vite": "^2.4.4"
   },
   "dependencies": {
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "swiper": "^10.3.1"
   },
   "name": "tailwind-project-fb-page"
 }

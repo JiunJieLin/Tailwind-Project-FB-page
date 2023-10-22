@@ -210,3 +210,70 @@ const randomStoryItem = function () {
 randomStoryItem();
 
 //包廂頭像的複製
+//Initialize Swiper
+const renderLiveItem = function () {
+  for (let i = 0; i < 15; i++) {
+    const swiperWrapperLive = document.getElementById("swiper-wrapper-live");
+    const divBox = document.createElement("div");
+    divBox.classList.add("swiper-slide");
+    const item = `<div class="w-[55px]">
+                  <div class="relative w-[40px] cursor-pointer">
+                    <div class="overflow-hidden rounded-full">
+                      <img src="https://bruce-fe-fb.web.app/image/avator.png" />
+                      <div
+                        class="absolute bottom-0 right-0 h-[10px] w-[10px] rounded-full bg-green-500 ring ring-gray-900"
+                      ></div>
+                    </div>
+                  </div>
+                </div>`;
+    divBox.innerHTML = item;
+    swiperWrapperLive.appendChild(divBox);
+  }
+
+  new Swiper(".fb-live", {
+    slidesPerView: "auto",
+    spaceBetween: 30,
+    // pagination: {
+    //   el: ".swiper-pagination",
+    //   clickable: true,
+    // },
+  });
+};
+renderLiveItem();
+
+/*const renderLiveItem = function () {
+ for (let i = 0; i < 20; i++) {
+    const swiperWrapperLive = document.getElementById("swiper-wrapper-live");
+    const divBox = document.createElement("div");
+    divBox.classList.add(
+      "min-w-[120px]",
+      "flex-1",
+      "cursor-pointer",
+      "px-[4px]",
+      "swiper-slide"
+    );
+    const item = `<div class="w-[55px]">
+                  <div class="relative w-[40px] cursor-pointer">
+                    <div class="overflow-hidden rounded-full">
+                      <img src="https://bruce-fe-fb.web.app/image/avator.png" />
+                      <div
+                        class="absolute bottom-0 right-0 h-[10px] w-[10px] rounded-full bg-green-500 ring ring-gray-900"
+                      ></div>
+                    </div>
+                  </div>
+                </div>`;
+    divBox.innerHTML = item;
+    swiperWrapperLive.appendChild(divBox);
+  }
+
+  new Swiper(".fb-live", {
+    slidesPerView: "auto",
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+};
+renderLiveItem();
+*/

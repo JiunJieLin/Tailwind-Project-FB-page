@@ -2,6 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FB page</title>
@@ -284,18 +288,46 @@
           </div>
         </div>
         <!-- 包廂輪播 -->
-        <div class="card flex">
+        <div class="card flex pr-0">
+          <!-- Swiper -->
+          <div class="swiper-container fb-live">
+            <div class="swiper-wrapper" id="swiper-wrapper-live">
+              <div class="swiper-slide">
+                <button
+                  class="mr-4 flex h-[40px] items-center rounded-full px-4 ring-2 ring-gray-600"
+                >
+                  <div class="w-[24px]">
+                    <img src="https://bruce-fe-fb.web.app/image/video.svg" />
+                  </div>
+                  <p class="ml-2 text-sm font-bold text-fb">建立包廂</p>
+                </button>
+              </div>
+              <div class="swiper-slide">
+                <!-- <div class="w-[55px]">
+                  <div class="relative w-[40px] cursor-pointer">
+                    <div class="overflow-hidden rounded-full">
+                      <img src="https://bruce-fe-fb.web.app/image/avator.png" />
+                      <div
+                        class="absolute bottom-0 right-0 h-[10px] w-[10px] rounded-full bg-green-500 ring ring-gray-900"
+                      ></div>
+                    </div>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+            <!-- <div class="swiper-pagination"></div> -->
+          </div>
           <!-- 包廂 -->
-          <button
+          <!-- <button
             class="mr-4 flex h-[40px] items-center rounded-full px-4 ring-2 ring-gray-600"
           >
             <div class="w-[24px]">
               <img src="https://bruce-fe-fb.web.app/image/video.svg" />
             </div>
             <p class="ml-2 text-sm font-bold text-fb">建立包廂</p>
-          </button>
+          </button> -->
           <!-- 大頭 -->
-          <div class="w-[55px]">
+          <!-- <div class="w-[55px]">
             <div class="relative w-[40px] cursor-pointer">
               <div class="overflow-hidden rounded-full">
                 <img src="https://bruce-fe-fb.web.app/image/avator.png" />
@@ -304,8 +336,9 @@
                 ></div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
+        <!-- 貼文樣式 1 -->
       </div>
 
       <!-- 右側資訊欄 -->
@@ -314,6 +347,7 @@
         id="right-list"
       ></div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script type="module" src="./src/main.js"></script>
   </body>
 </html>
