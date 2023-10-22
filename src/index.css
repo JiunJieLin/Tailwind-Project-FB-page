@@ -9,3 +9,12 @@
     @apply absolute right-0 top-12 w-[300px] rounded-lg border-fb-input bg-fb-header p-4 shadow-lg lg:w-[360px];
   }
 }
+
+/* Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+/* Firefox */
+.no-scrollbar {
+  scrollbar-width: none;
+}

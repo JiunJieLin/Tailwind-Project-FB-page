@@ -157,3 +157,25 @@ for (let i = 0; i < 10; i++) {
     renderRightList("Kim", "https://bruce-fe-fb.web.app/image/avator.png");
 }
 rightList.innerHTML = str;
+
+//動態牆的複製
+const folatingItem = `<div class="min-w-[120px] flex-1 cursor-pointer px-[4px]">
+              <!-- 布的按鈕 -->
+              <div class="relative">
+                <div
+                  class="absolute left-4 top-4 z-10 flex h-[32px] w-[32px] items-center justify-center rounded-full bg-fb-card ring ring-fb"
+                >
+                  <p class="text-sm text-white">布</p>
+                </div>
+
+                <!-- 覆蓋一層背景漸層的效果 -->
+                <div
+                  class="absolute left-0 top-0 h-full w-full bg-gradient-to-b from-black/30 to-transparent"
+                ></div>
+                <img
+                  class="h-full w-full duration-300 hover:scale-105"
+                  src="https://bruce-fe-fb.web.app/image/story.png"
+                />
+                <p class="absolute bottom-2 left-2 text-white">Kim</p>
+              </div>
+            </div>`;
