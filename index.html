@@ -12,7 +12,7 @@
   </head>
   <body class="bg-fb-bg">
     <header
-      class="fixed flex h-[56px] w-full items-center justify-between bg-fb-header px-4"
+      class="fixed z-40 flex h-[56px] w-full items-center justify-between bg-fb-header px-4"
     >
       <!-- header left -->
       <div class="flex items-center">
@@ -199,7 +199,7 @@
     <main class="flex min-h-[100vh] pt-main-span">
       <!-- 左側資訊欄 -->
       <div
-        class="sticky top-main-span hidden h-full w-full max-w-[360px] border-2 p-4 lg:block"
+        class="sticky top-main-span hidden h-full w-full max-w-[360px] p-4 lg:block"
         id="left-list"
       ></div>
       <!-- 動態牆 -->
@@ -231,7 +231,7 @@
           <!-- 箭頭 -->
           <div>
             <button
-              class="popover-btn absolute -right-3 top-[calc(50%-22.5px)] z-10 h-[45px] w-[45px]"
+              class="popover-btn absolute -right-3 top-[calc(50%-22.5px)] z-30 h-[45px] w-[45px]"
             >
               <img src="https://bruce-fe-fb.web.app/image/right-arrow.svg" />
             </button>
@@ -338,12 +338,126 @@
             </div>
           </div> -->
         </div>
-        <!-- 貼文樣式 1 -->
+        <!-- 貼文牆 -->
+        <div class="card">
+          <!-- 貼文標題 -->
+          <div class="flex">
+            <div class="mr-2 w-[44px] overflow-hidden rounded-full">
+              <img src="https://bruce-fe-fb.web.app/image/avator.png" />
+            </div>
+            <div class="flex-1">
+              <p class="text-white">Kim</p>
+              <div class="flex items-center text-sm text-gray-400">
+                <div>5 小時</div>
+                <div>．</div>
+                <div class="w-[12px]">
+                  <img
+                    class="w-full"
+                    src="https://bruce-fe-fb.web.app/image/earth.svg"
+                  />
+                </div>
+              </div>
+            </div>
+            <button class="w-[12px]">
+              <img src="https://bruce-fe-fb.web.app/image/more.svg" />
+            </button>
+          </div>
+          <!-- 貼文內文 -->
+          <p class="mt-3 px-4 text-base text-gray-300">
+            手作蛋糕高雄分店新開幕
+          </p>
+          <!-- 貼文圖片 -->
+          <a href="#" class="mt-3 block">
+            <div class="h-[260px] w-full overflow-hidden">
+              <img
+                class="w-full object-cover"
+                src="https://bruce-fe-fb.web.app/image/item.png"
+              />
+            </div>
+            <div class="bg-fb-input px-4 py-2 text-white">
+              <p class="text-sm text-gray-400">WWW.cake.com</p>
+              <p class="text-lg">手作蛋糕高雄分店新開幕!!</p>
+            </div>
+          </a>
+          <!-- 讚和留言 -->
+          <div class="px-4">
+            <div class="flex justify-between border-b border-gray-700 py-3">
+              <div class="flex">
+                <div class="mr-2 w-[18px]">
+                  <img src="https://bruce-fe-fb.web.app/image/like-blue.svg" />
+                </div>
+                <p class="text-sm text-gray-400">990</p>
+              </div>
+              <div class="flex">
+                <p class="mr-2 text-sm text-gray-400">4 則留言</p>
+                <p class="text-sm text-gray-400">1 次分享</p>
+              </div>
+            </div>
+            <!-- button -->
+            <div class="flex flex-1 items-center justify-around pt-3">
+              <div>
+                <button
+                  class="flex h-[40px] items-center rounded-lg hover:bg-fb-input"
+                >
+                  <div class="w-[16px]">
+                    <img src="https://bruce-fe-fb.web.app/image/like.svg" />
+                  </div>
+                  <p class="pl-1.5 text-sm text-gray-400">讚</p>
+                </button>
+              </div>
+              <div>
+                <button
+                  class="flex h-[40px] items-center rounded-lg hover:bg-fb-input"
+                >
+                  <div class="w-[16px]">
+                    <img src="https://bruce-fe-fb.web.app/image/comment.svg" />
+                  </div>
+                  <p class="pl-1.5 text-sm text-gray-400">留言</p>
+                </button>
+              </div>
+              <div>
+                <button
+                  class="flex h-[40px] items-center rounded-lg hover:bg-fb-input"
+                >
+                  <div class="w-[16px]">
+                    <img src="https://bruce-fe-fb.web.app/image/share.svg" />
+                  </div>
+                  <p class="pl-1.5 text-sm text-gray-400">分享</p>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Loading -->
+          <div class="card animate-pulse">
+            <div class="mb-4 flex items-center px-4">
+              <div
+                class="overflow-hiddden mr-3 h-[44px] w-[44px] rounded-full bg-fb-input"
+              ></div>
+              <div class="flex h-[50px] w-[200px] flex-wrap content-evenly">
+                <div class="h-[16px] w-[200px] rounded-full bg-fb-input"></div>
+                <div class="h-[12px] w-[100px] rounded-full bg-fb-input"></div>
+              </div>
+            </div>
+            <div class="h-[260px] w-full bg-fb-input"></div>
+          </div>
+          <div class="card animate-pulse">
+            <div class="mb-4 flex items-center px-4">
+              <div
+                class="overflow-hiddden mr-3 h-[44px] w-[44px] rounded-full bg-fb-input"
+              ></div>
+              <div class="flex h-[50px] w-[200px] flex-wrap content-evenly">
+                <div class="h-[16px] w-[200px] rounded-full bg-fb-input"></div>
+                <div class="h-[12px] w-[100px] rounded-full bg-fb-input"></div>
+              </div>
+            </div>
+            <div class="h-[260px] w-full bg-fb-input"></div>
+          </div>
+        </div>
       </div>
 
       <!-- 右側資訊欄 -->
       <div
-        class="sticky top-main-span hidden h-full w-full max-w-[360px] border-2 lg:block"
+        class="sticky top-main-span hidden h-full w-full max-w-[360px] lg:block"
         id="right-list"
       ></div>
     </main>
