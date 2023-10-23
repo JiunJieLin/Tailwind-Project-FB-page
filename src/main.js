@@ -134,7 +134,7 @@ lists();
 const rightList = document.getElementById("right-list");
 const renderRightList = function (name, img) {
   const items = `<div
-          class="flex w-full cursor-pointer items-center justify-items-center rounded py-2 px-1 hover:bg-fb-input"
+          class="flex w-full cursor-pointer items-center justify-center rounded py-2 px-1 hover:bg-fb-input"
         >
           <div class="w-[45px]">
             <div class="relative w-[32px]">
@@ -150,7 +150,7 @@ const renderRightList = function (name, img) {
         </div>`;
   return items;
 };
-let str = `"<p class="mb-2 w-full text-gray-400 text-lg">聯絡人</p>"`;
+let str = `<p class="mb-2 w-full text-gray-400 text-md text-center">聯絡人</p>`;
 for (let i = 0; i < 10; i++) {
   str =
     str +
